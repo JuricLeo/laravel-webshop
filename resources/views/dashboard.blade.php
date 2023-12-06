@@ -31,9 +31,9 @@
                                 <td class="px-6 py-4 whitespace-nowrap text-white">{{ $product->dostupna_kolicina }}</td>
                                 <td class="px-6 py-4 whitespace-nowrap">
                                     @if ($product->user_id == auth()->user()->id)
-                                    <a href="{{ route('products.edit', $product->id) }}" class="text-green-500 hover:underline">Azuriraj</a>
+                                    <a href="{{ route('products.edit', $product->id) }}" class="text-green-500 hover:underline">Ažuriraj</a>
                                     @else
-                                    <button class="order-product text-blue-500 hover:underline" data-product-id="{{ $product->id }}" data-order-url="{{ route('order.product', $product->id) }}">Naruci</button>
+                                    <button disabled class="order-product text-gray-500 cursor-not-allowed" data-product-id="{{ $product->id }}" data-order-url="{{ route('order.product', $product->id) }}">Naruči</button>
                                     @endif
                                 </td>
                             </tr>
