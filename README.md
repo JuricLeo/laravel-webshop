@@ -1,7 +1,12 @@
 How to run the app:
-1. npm run dev
-2. php artisan serve
-3. brew services start mysql
+1. brew services start mysql
+2. composer install
+3. cp .env.example .env
+4. php artisan key:generate
+    4.1. In the .env file change the root and password to match your MySQL server
+5. php artisan serve
+6. npm install
+7. npm run dev
 
 
 
